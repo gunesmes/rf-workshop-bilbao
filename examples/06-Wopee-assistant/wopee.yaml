@@ -1,0 +1,13 @@
+vrt_project_name: 42cda997-d47e-4c39-9a07-0056bb91d3bc
+# vrt_ci_build_id: demo-robot-TESTING2
+
+# Default
+# keywords: ["Browser.Click", "SeleniumLibrary.Click Element"]
+
+# keywords: [
+#   "Browser.Fill Text",
+#   "Browser.Click",
+#   "SeleniumLibrary.Click Element"
+# ]
+
+keywords: ["Wopee check"]

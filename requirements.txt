@@ -1,0 +1,4 @@
+robotframework-browser
+robotframework-tidy
+robotframework-requests
+WatchUI
