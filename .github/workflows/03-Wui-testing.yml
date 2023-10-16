@@ -1,0 +1,70 @@
+name: 👁️👁️ Testing with WatchUI
+run-name: "WatchUI testing, SUT: ${{ inputs.url }}"
+
+on:
+  workflow_dispatch:
+    inputs:
+      testing_mode:
+        type: choice
+        description: "What tests to execute?"
+        required: true
+        default: automation
+        options:
+          - automation
+          - autonomous
+          - "own autonomous"
+      url:
+        description: "System under test, url (only for 'own autonomous'):"
+        required: true
+        default: https://dronjo.wopee.io
+
+env:
+  REGISTRY: ghcr.io
+
+jobs:
+  example3:
+    name: Example 3 - Visual validation with WatchUI
+
+    timeout-minutes: 15
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: actions/setup-python@v4
+        with:
+          python-version: "3.11"
+
+      - name: Install RF w. Browser library
+        run: |
+          pip install -r requirements.txt
+          rfbrowser init
+
+      - name: Testing w. RF
+        if: inputs.testing_mode != 'automation'
+        run: |
+          robot \
+            --outputdir reports \
+            examples/03-WatchUI/03a_testing_w_WU_validation.robot
+
+      - name: Testing w. RF
+        if: inputs.testing_mode != 'autonomous'
+        run: |
+          robot \
+            --outputdir reports \
+            examples/03-WatchUI/03b_bot_w_WU_validation.robot
+
+      - name: Testing w. RF
+        if: inputs.testing_mode != 'own autonomous'
+        run: |
+          robot \
+            --outputdir reports \
+            --variable URL=${{ inputs.url }}
+            examples/03-WatchUI/03b_bot_w_WU_validation.robot
+
+      - uses: actions/upload-artifact@v3
+        if: always()
+        with:
+          name: example3-run-logs
+          path: reports/
+          retention-days: 10

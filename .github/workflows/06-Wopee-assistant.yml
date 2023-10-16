@@ -1,0 +1,46 @@
+name: 👷🏼 Visual Regression Testing - Wopee Assistan Demo
+run-name: "Wopee Assistant Testing, SUT: ${{ inputs.url }}"
+
+on:
+  workflow_dispatch:
+    inputs:
+      url:
+        description: "Url to fill form"
+        required: true
+        default: https://dronjo.wopee.io
+
+env:
+  REGISTRY: ghcr.io
+
+jobs:
+  example6:
+    name: Example 6 - Visual validation with Wopee Assistant
+
+    timeout-minutes: 15
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: actions/setup-python@v4
+        with:
+          python-version: "3.11"
+
+      - name: Install RF w. Browser library
+        run: |
+          pip install -r requirements.txt
+          rfbrowser init
+
+      - name: Testing w. RF
+        run: |
+          robot \
+            --outputdir reports \
+            --variable URL=${{ inputs.url }}
+            examples/06-Wopee-Assistant/smoke.robot
+
+      - uses: actions/upload-artifact@v3
+        if: always()
+        with:
+          name: example6-run-logs
+          path: reports/
+          retention-days: 10

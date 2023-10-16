@@ -1,0 +1,45 @@
+name: 🤖 Autonomous testing bot - browser console
+run-name: "Running `Console status testing bot`, SUT: ${{ inputs.url }}"
+
+on:
+  workflow_dispatch:
+    inputs:
+      url:
+        description: "System under test, url:"
+        required: true
+        default: https://dronjo.wopee.io
+
+env:
+  REGISTRY: ghcr.io
+
+jobs:
+  example1:
+    name: Example 1 - Autonomous testing based on status in the browser console
+    timeout-minutes: 15
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: actions/setup-python@v4
+        with:
+          python-version: "3.11"
+
+      - name: Install RF w. Browser library
+        run: |
+          pip install -r requirements.txt
+          rfbrowser init
+
+      - name: Testing w. RF
+        run: |
+          robot \
+            --outputdir reports \
+            --variable URL=${{ inputs.url }} \
+            examples/01-Console/01_bot_w_console_validation.robot
+
+      - uses: actions/upload-artifact@v3
+        if: always()
+        with:
+          name: example1-run-logs
+          path: reports/
+          retention-days: 10
