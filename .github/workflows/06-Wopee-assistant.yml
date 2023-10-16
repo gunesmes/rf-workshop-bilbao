@@ -23,7 +23,7 @@ jobs:
 
       - name: Installation
         run: |
-          gh release download latest --repo autonomous-testing/wopee.rf --archive zip --dir dist
+          gh release download --repo autonomous-testing/wopee.rf --archive zip --dir dist
           pip install dist/*.zip
           pip install -r requirements.txt
           rfbrowser init
