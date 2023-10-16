@@ -40,8 +40,9 @@ jobs:
           robot \
             --outputdir reports \
             --variable URL=${{ inputs.url }} \
-            --variable OPENAI_API_KEY="${{ inputs.openai_api_key }}" \
             examples/02-Forms-fill/02_autonomous_form_filling.robot
+        env:
+          OPENAI_API_KEY: ${{ inputs.openai_api_key }}
 
       - uses: actions/upload-artifact@v3
         if: always()
