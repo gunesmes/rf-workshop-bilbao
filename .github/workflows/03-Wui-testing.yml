@@ -1,5 +1,5 @@
 name: 03 👁️👁️ Testing with WatchUI
-run-name: "03 👁️👁️ WatchUI testing, SUT: ${{ inputs.url }}, mode: ${{ inputs.testing_mode }}"
+run-name: "03 👁️👁️ WatchUI testing, mode: ${{ inputs.testing_mode }}, tests: ${{ inputs.tests }}"
 
 on:
   workflow_dispatch:
@@ -14,7 +14,7 @@ on:
           - autonomous
       tests:
         type: number
-        description: "Number of tests(only for 'own autonomous'):"
+        description: "Number of tests(only for 'autonomous'):"
         required: true
         default: 5
 
@@ -35,7 +35,7 @@ jobs:
         with:
           python-version: "3.11"
 
-      - name: Install RF w. Browser library
+      - name: Installation
         run: |
           pip install -r requirements.txt
           rfbrowser init

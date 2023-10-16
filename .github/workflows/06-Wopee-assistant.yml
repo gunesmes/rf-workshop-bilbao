@@ -1,5 +1,5 @@
-name: 👷🏼 Visual Regression Testing - Wopee Assistan Demo
-run-name: "Wopee Assistant Testing, SUT: ${{ inputs.url }}"
+name: 06 👷🏼 Wopee Assistant Testing
+run-name: "06 👷🏼 Wopee Assistant Testing, SUT: ${{ inputs.url }}"
 
 on:
   workflow_dispatch:
@@ -14,7 +14,7 @@ env:
 
 jobs:
   example6:
-    name: Example 6 - Visual validation with Wopee Assistant
+    name: Visual validation with Wopee Assistant
 
     timeout-minutes: 15
     runs-on: ubuntu-latest
@@ -26,12 +26,12 @@ jobs:
         with:
           python-version: "3.11"
 
-      - name: Install RF w. Browser library
+      - name: Installation
         run: |
           pip install -r requirements.txt
           rfbrowser init
 
-      - name: Testing w. RF
+      - name: Testing
         run: |
           robot \
             --outputdir reports \
