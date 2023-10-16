@@ -1,5 +1,5 @@
-name: 01 🤖 Browser console testing
-run-name: "01 🤖 Console status testing bot, SUT: ${{ inputs.url }}"
+name: 01 🤖 Browser Console Testing
+run-name: "01 🤖 Status testing bot, SUT: ${{ inputs.url }}"
 
 on:
   workflow_dispatch:
@@ -14,7 +14,7 @@ env:
 
 jobs:
   example1:
-    name: E1 - Autonomous testing bot (browser console status)
+    name: Browser console status testing
     timeout-minutes: 15
     runs-on: ubuntu-latest
 
