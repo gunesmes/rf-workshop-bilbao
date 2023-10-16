@@ -6,11 +6,7 @@ Resource    ../../resources/ai.robot
 
 
 *** Variables ***
-${URL}      https://dronjo.wopee.io/sign-in.html
-# ${URL}    https://dronjo.wopee.io/contact.html
-# ${URL}    https://dronjo.wopee.io/buy.html
-# ${URL}    https://www.amazon.es/
-# ${URL}    https://www.elmundo.es/
+${URL}      %{URL=https://dronjo.wopee.io/sign-in.html}
 
 
 *** Test Cases ***
