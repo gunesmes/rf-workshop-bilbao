@@ -2,6 +2,7 @@
 
 ## Building models
 
-https://teachablemachine.withgoogle.com/train/image
+See more
 
-https://github.com/googlecreativelab/teachablemachine-community/tree/master/libraries/image
+- [Teachable Machine](https://teachablemachine.withgoogle.com/train/image)
+- [Teachable Machine - GitHub](https://github.com/googlecreativelab/teachablemachine-community/tree/master/libraries/image)
