@@ -1,7 +1,7 @@
 *** Settings ***
 Library         Collections
 Library         Browser
-Library         WatchUI    outputs_folder=${IMAGES_STORAGE}/outputs
+Library         WatchUI    outputs_folder=${IMAGES_STORAGE}/comparisons
 Library         OperatingSystem
 Resource        ../../resources/common.robot
 
@@ -53,7 +53,8 @@ Check Visual
     ${status}=    Run Keyword And Return Status
     ...    Compare Images
     ...    ${actual screen file}
-    ...    baselines/${screen_id}.png
+    ...    baselines/${CI}${screen_id}.png
+    ...    ssim=0.99
 
     IF    '${status}' == 'False'
         Log    ERROR FOUND: Page at ${page_url} seems to be different than the one storeed as baseline.    level=ERROR

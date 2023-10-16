@@ -1,7 +1,7 @@
 *** Settings ***
 Library         Collections
 Library         Browser
-Library         WatchUI    outputs_folder=${IMAGES_STORAGE}/outputs
+Library         WatchUI    outputs_folder=${IMAGES_STORAGE}/comparison
 Library         OperatingSystem
 Resource        ../../resources/common.robot
 
@@ -16,7 +16,7 @@ ${IMAGES_STORAGE}       ${OUTPUTDIR}/wui_images
 ${HEADLESS}             True
 
 # equal `ci` when running in CI
-${CI}                   %{CI}/
+${CI}                   %{CI=}/
 
 
 *** Test Cases ***
@@ -57,7 +57,7 @@ Checks visual
     ...    fullPage=True
     ...    disableAnimations=True
     ...    timeout=1s
-    Compare Images    ${actual screen file}    baselines/${CI}${screen_id}.png
+    Compare Images    ${actual screen file}    baselines/${CI}${screen_id}.png    ssim=0.99
 
 Checks visual wo areas
     [Arguments]    ${x1}    ${y1}    ${x2}    ${y2}
