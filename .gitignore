@@ -351,6 +351,7 @@ report.html
 interactive_console_output.xml
 selenium-screenshot-*.png
 outputs
+reports
 
 ### robotframework Browser library ###
 playwright-log.html
