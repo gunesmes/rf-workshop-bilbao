@@ -356,6 +356,8 @@ outputs
 playwright-log.html
 playwright-log.txt
 browser
+videos
+trace.zip
 
 ### VisualStudioCode ###
 .vscode/*
