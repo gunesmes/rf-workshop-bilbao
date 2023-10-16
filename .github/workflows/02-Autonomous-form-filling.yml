@@ -1,5 +1,5 @@
-name: 🎹 Filling Form Bot
-run-name: "Running `Filling Form Bot`, SUT: ${{ inputs.url }}, executed by ${{ github.event.sender.email }}"
+name: 02 🎹 Filling Forms Bot
+run-name: "02 Filling Form Bot, SUT: ${{ inputs.url }}"
 
 on:
   workflow_dispatch:
@@ -11,7 +11,7 @@ on:
       openai_api_key:
         description: "OpenAI API key"
         required: true
-        default: Bearer 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
+        default: "Bearer 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"
 
 env:
   REGISTRY: ghcr.io
@@ -30,17 +30,17 @@ jobs:
         with:
           python-version: "3.11"
 
-      - name: Install RF w. Browser library
+      - name: Installation
         run: |
           pip install -r requirements.txt
           rfbrowser init
 
-      - name: Testing w. RF
+      - name: Testing
         run: |
           robot \
             --outputdir reports \
             --variable URL=${{ inputs.url }} \
-            --variable OPENAI_API_KEY=${{ inputs.openai_api_key }} \
+            --variable OPENAI_API_KEY="${{ inputs.openai_api_key }}" \
             examples/02-Forms-fill/02_autonomous_form_filling.robot
 
       - uses: actions/upload-artifact@v3
