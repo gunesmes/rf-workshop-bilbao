@@ -15,6 +15,9 @@ ${URL}                              %{URL=https://dronjo.wopee.io}
 ${IMAGES_STORAGE}                   ${OUTPUTDIR}/wui_images
 ${HEADLESS}                         True
 
+# equal `ci` when running in CI
+${CI}                               %{CI=}/
+
 ${ERR_COUNT}                        0
 ${WARN_COUNT}                       0
 
