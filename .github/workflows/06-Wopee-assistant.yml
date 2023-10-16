@@ -1,5 +1,5 @@
 name: 06 👷🏼 Wopee Assistant Testing
-run-name: "06 👷🏼 Wopee Assistant Testing, SUT: ${{ inputs.url }}"
+run-name: "06 👷🏼 Wopee Assistant Testing"
 
 on:
   workflow_dispatch:
