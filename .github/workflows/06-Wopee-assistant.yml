@@ -34,7 +34,7 @@ jobs:
         run: |
           robot \
             --outputdir reports \
-            --listener wopee_rf.listener
+            --listener wopee_rf.listener \
             examples/06-Wopee-Assistant/smoke.robot
 
       - uses: actions/upload-artifact@v3
