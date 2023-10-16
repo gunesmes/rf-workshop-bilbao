@@ -31,6 +31,10 @@ Provide me steps to accomplish it in json format. Example:
 ```
 ````
 
+## Trace viewer
+
+Analyze your result in [Trace viewer](https://trace.playwright.dev/)
+
 Try it with one of the following HTML:
 
 <details>
