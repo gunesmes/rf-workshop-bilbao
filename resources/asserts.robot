@@ -13,7 +13,7 @@ Console should not contain errors
             Log    ERROR FOUND: ${log_item}    level=ERROR
             ${new_err_val}=    Evaluate    ${ERR_COUNT}+1
             Set Global Variable    ${ERR_COUNT}    ${new_err_val}
-            Take Screenshot
+            Take Screenshot    fullPage=True
         END
     END
 
