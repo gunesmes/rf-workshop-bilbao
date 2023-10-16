@@ -1,5 +1,5 @@
-name: 👁️👁️ Testing with WatchUI
-run-name: "WatchUI testing, SUT: ${{ inputs.url }}"
+name: 03 👁️👁️ Testing with WatchUI
+run-name: "03 👁️👁️ WatchUI testing, SUT: ${{ inputs.url }}, mode: ${{ inputs.testing_mode }}"
 
 on:
   workflow_dispatch:
@@ -23,7 +23,7 @@ env:
 
 jobs:
   example3:
-    name: Example 3 - Visual validation with WatchUI
+    name: Visual validation with WatchUI
 
     timeout-minutes: 15
     runs-on: ubuntu-latest
@@ -40,22 +40,22 @@ jobs:
           pip install -r requirements.txt
           rfbrowser init
 
-      - name: Testing w. RF
-        if: inputs.testing_mode != 'automation'
+      - name: Testing (automation)
+        if: inputs.testing_mode == 'automation'
         run: |
           robot \
             --outputdir reports \
             examples/03-WatchUI/03a_testing_w_WU_validation.robot
 
-      - name: Testing w. RF
-        if: inputs.testing_mode != 'autonomous'
+      - name: Testing (autonomous)
+        if: inputs.testing_mode == 'autonomous'
         run: |
           robot \
             --outputdir reports \
             examples/03-WatchUI/03b_bot_w_WU_validation.robot
 
-      - name: Testing w. RF
-        if: inputs.testing_mode != 'own autonomous'
+      - name: Testing (own autonomous)
+        if: inputs.testing_mode == 'own autonomous'
         run: |
           robot \
             --outputdir reports \
