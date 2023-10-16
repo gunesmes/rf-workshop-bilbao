@@ -12,11 +12,6 @@ on:
         options:
           - automation
           - autonomous
-      url:
-        type: string
-        description: "System under test, url (only for 'own autonomous'):"
-        required: true
-        default: https://dronjo.wopee.io
       tests:
         type: number
         description: "Number of tests(only for 'own autonomous'):"

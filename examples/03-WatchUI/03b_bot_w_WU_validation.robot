@@ -54,16 +54,27 @@ Check Visual
     ${screen_id}=    Convert URL to Unique String    url=${page_url}
     ${actual screen file}=    Set Variable    ${IMAGES_STORAGE}/${screen_id}.png
 
-    ${status}=    Run Keyword And Return Status
-    ...    Compare Images
-    ...    ${actual screen file}
-    ...    baselines/${CI}${screen_id}.png
-    ...    ssim=0.99
+    ${baseline_exists}=    Run Keyword And Return Status    File Should Exist    baselines/${CI}${screen_id}.png
+    IF    '${baseline_exists}' == 'False'
+        Log
+        ...    Baseline for ${page_url} / ${screen_id} does not exist. You need to create one - take the screenshot from report.
+        ...    level=WARN
+        ${new_warn_val}=    Evaluate    ${WARN_COUNT}+1
+        Set Global Variable    ${WARN_COUNT}    ${new_warn_val}
+    ELSE
+        ${status}=    Run Keyword And Return Status
+        ...    Compare Images
+        ...    ${actual screen file}
+        ...    baselines/${CI}${screen_id}.png
+        ...    ssim=0.99
 
-    IF    '${status}' == 'False'
-        Log    ERROR FOUND: Page at ${page_url} seems to be different than the one storeed as baseline.    level=ERROR
-        ${new_err_val}=    Evaluate    ${ERR_COUNT}+1
-        Set Global Variable    ${ERR_COUNT}    ${new_err_val}
+        IF    '${status}' == 'False'
+            Log
+            ...    ERROR FOUND: Page at ${page_url} / ${screen_id} seems to be different than the one storeed as baseline.
+            ...    level=ERROR
+            ${new_err_val}=    Evaluate    ${ERR_COUNT}+1
+            Set Global Variable    ${ERR_COUNT}    ${new_err_val}
+        END
     END
 
 Start test

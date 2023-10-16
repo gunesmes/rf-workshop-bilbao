@@ -1,7 +1,7 @@
 *** Settings ***
 Library         Collections
 Library         Browser
-Library         WatchUI    outputs_folder=${IMAGES_STORAGE}/comparison
+Library         WatchUI    outputs_folder=${IMAGES_STORAGE}/comparisons
 Library         OperatingSystem
 Resource        ../../resources/common.robot
 
