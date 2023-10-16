@@ -7,7 +7,7 @@ on:
       url:
         description: "System under test, url:"
         required: true
-        default: https://dronjo.wopee.io
+        default: https://dronjo.wopee.io/sign-in.html
       openai_api_key:
         description: "OpenAI API key"
         required: true
@@ -18,7 +18,7 @@ env:
 
 jobs:
   example2:
-    name: Example 2 - Filling forms on the fly w. Gen AI
+    name: Filling forms on the fly with GenAI
 
     timeout-minutes: 15
     runs-on: ubuntu-latest
@@ -48,4 +48,4 @@ jobs:
         with:
           name: example2-run-logs
           path: reports/
-          retention-days: 10
+          retention-days: 1

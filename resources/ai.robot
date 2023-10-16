@@ -164,3 +164,28 @@ Get AI Advice
     ${t3}=    Get From Dictionary    ${t2}    content
 
     RETURN    ${t3}
+
+Start progress loader
+    ${texts}=    Evaluate JavaScript    html
+    ...    (elements, arg) => {
+    ...    elements[0].insertAdjacentHTML(
+    ...    'beforeend',
+    ...    '<div class="wopeePopup">'+
+    ...    '<h2>❤️ Wopee.io 🦧</h2>'+
+    ...    '</div>'+
+    ...    '<style>'+
+    ...    '.wopeePopup {'+
+    ...    'display: block;'+
+    ...    'position: fixed;'+
+    ...    'top: 15px;'+
+    ...    'left: 15px;'+
+    ...    'padding: 15px;'+
+    ...    'margin: 15px;'+
+    ...    'background-color: rgb(255 204 0);'+
+    ...    'z-index: 9;'+
+    ...    '}'+
+    ...    '.wopeePopup h2 { animation: blinker 1s linear infinite; }'+
+    ...    '@keyframes blinker { 50% { opacity: 0; } }'+
+    ...    '<style>'
+    ...    );}
+    ...    all_elements=True
