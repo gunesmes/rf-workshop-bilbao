@@ -15,6 +15,9 @@ ${URL}                  https://dronjo.wopee.io
 ${IMAGES_STORAGE}       ${OUTPUTDIR}/wui_images
 ${HEADLESS}             True
 
+# equal `ci` when running in CI
+${CI}                   %{CI}/
+
 
 *** Test Cases ***
 Checkout Test
@@ -54,7 +57,7 @@ Checks visual
     ...    fullPage=True
     ...    disableAnimations=True
     ...    timeout=1s
-    Compare Images    ${actual screen file}    baselines/${screen_id}.png
+    Compare Images    ${actual screen file}    baselines/${CI}${screen_id}.png
 
 Checks visual wo areas
     [Arguments]    ${x1}    ${y1}    ${x2}    ${y2}
@@ -70,7 +73,7 @@ Checks visual wo areas
     ...    timeout=1s
     Compare screen without areas
     ...    ${actual screen file}
-    ...    baselines/${screen_id}.png
+    ...    baselines/${CI}${screen_id}.png
     ...    ${x1}
     ...    ${y1}
     ...    ${x2}
