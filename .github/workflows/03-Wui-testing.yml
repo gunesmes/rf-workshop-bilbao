@@ -12,11 +12,16 @@ on:
         options:
           - automation
           - autonomous
-          - "own autonomous"
       url:
+        type: string
         description: "System under test, url (only for 'own autonomous'):"
         required: true
         default: https://dronjo.wopee.io
+      tests:
+        type: number
+        description: "Number of tests(only for 'own autonomous'):"
+        required: true
+        default: 5
 
 env:
   REGISTRY: ghcr.io
@@ -55,14 +60,9 @@ jobs:
           robot \
             --outputdir reports \
             examples/03-WatchUI/03b_bot_w_WU_validation.robot
-
-      - name: Testing (own autonomous)
-        if: inputs.testing_mode == 'own autonomous'
-        run: |
-          robot \
-            --outputdir reports \
-            --variable URL=${{ inputs.url }}
-            examples/03-WatchUI/03b_bot_w_WU_validation.robot
+        env:
+          CI: ci
+          TESTS: ${{ inputs.tests }}
 
       - uses: actions/upload-artifact@v3
         if: always()

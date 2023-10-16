@@ -10,7 +10,7 @@ Test Setup      Start test
 
 *** Variables ***
 ${BROWSER}                          chromium
-${URL}                              %{URL=https://dronjo.wopee.io}
+${URL}                              https://dronjo.wopee.io
 
 ${IMAGES_STORAGE}                   ${OUTPUTDIR}/wui_images
 ${HEADLESS}                         True
@@ -22,7 +22,7 @@ ${ERR_COUNT}                        0
 ${WARN_COUNT}                       0
 
 ${MAX_DEPTH_TO_CRAWL}               3
-${MAX_NUMBER_OF_PAGE_TO_CRAWL}      5
+${MAX_NUMBER_OF_PAGE_TO_CRAWL}      %{TESTS=5}
 
 
 *** Test Cases ***
@@ -32,6 +32,7 @@ Crawl a website
     ...    max_depth_to_crawl=${MAX_DEPTH_TO_CRAWL}
     ...    max_number_of_page_to_crawl=${MAX_NUMBER_OF_PAGE_TO_CRAWL}
     Get Summary Results    ${ERR_COUNT}    ${WARN_COUNT}    ${MAX_NUMBER_OF_PAGE_TO_CRAWL}
+
 
 
 *** Keywords ***
