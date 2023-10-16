@@ -46,6 +46,8 @@ jobs:
           robot \
             --outputdir reports \
             examples/03-WatchUI/03a_testing_w_WU_validation.robot
+        env:
+          CI: ci
 
       - name: Testing (autonomous)
         if: inputs.testing_mode == 'autonomous'
