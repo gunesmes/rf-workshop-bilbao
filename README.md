@@ -1,4 +1,4 @@
-# Workshop with Robot Framework for Visual Regression Testing
+# Autonomous (Visual Regression) Testing with Robot Framework
 
 This repository consist is compilation of various examples of features which
 helps to bring test automation into testing autonomy via introducing visual testing.
