@@ -13,3 +13,8 @@ and visual checks. Get access to Wopee Commander at https://cmd.wopee.io/
 ```shell
 robot  --listener wopee_rf.listener examples/06-Wopee-assistant/smoke.robot
 ```
+
+In order to run the tests with Wopee Assistant, you need to get early preview
+access to Wopee Advanced Features.
+
+Contact us at: [help@wopee.io](help@wopee.io) to get access.
