@@ -1,7 +1,9 @@
-# Wopee Workshop w. Robot Framework for Visual Regression Testing
+# Workshop with Robot Framework for Visual Regression Testing
 
 This repository consist is compilation of various examples of features which
 helps to bring test automation into testing autonomy via introducing visual testing.
+
+All examples and prototypes are based on [Robot Framework](https://robotframework.org/).
 
 ## Install Robot Framework
 
