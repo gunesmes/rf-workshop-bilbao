@@ -37,6 +37,12 @@ Analyze your result in [Trace viewer](https://trace.playwright.dev/)
 
 Try it with one of the following HTML:
 
+## Video from test execution
+
+There is a video stored withing GitHub repo under the GitHub actions tab in artifacts.
+Navigate in repository to Actions > select the latest run > select the latest job >
+select the latest artifact > download the zip log.
+
 <details>
   <summary>Check out page</summary>
 
@@ -304,3 +310,36 @@ Try it with one of the following HTML:
 ```
 
 </details>
+
+## Tasks for you
+
+Goals:
+
+- Get familiar with Gen AI models
+- Learn how to implement simple autonomous interaction (submit form)
+- Explore what was generated (video, trace, logs)
+
+Steps:
+
+1. Start exepriment with https://sdk.vercel.ai/
+
+- Prompt the propose 10 tests to test CRM (or any app you typically test)
+- Prompt the tool to fill the form (provide HTML form - e.g. the ones above)
+- Prompt the tool to provide 3 potential locators to use for the form submit button
+- ... share with coleagues your ideas what else to try?
+
+2. Try it run
+
+- Navigate to Actions > 02 🎹 Filling Forms Bot
+- Click Run Workflow > click Run Workflow (the green button)
+
+3. Run it for your own URL
+
+   - Navigate to Actions > 02 🎹 Filling Forms Bot
+   - Click Run Workflow > set your own URL to test > click Run Workflow
+     (the green button)
+
+4. Advanced debugging
+
+- Check out video
+- Check out trace viewer

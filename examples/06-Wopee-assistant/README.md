@@ -1,4 +1,4 @@
-# Example 6: Visual validation with Wopee Assistant
+# Example 6 (demo): Visual validation with Wopee Assistant
 
 ## About Wopee Assistant
 
@@ -18,3 +18,13 @@ In order to run the tests with Wopee Assistant, you need to get early preview
 access to Wopee Advanced Features.
 
 Contact us at: [help@wopee.io](help@wopee.io) to get access.
+
+## Tasks for you
+
+Goals:
+
+- Find out what benefit it could bring to use ready made solution instead of DIY approach
+- Get familiar with Wopee Assistant
+- Other benefits: baseline management, history tracking, merging, team work, CI integration, ...
+
+Steps: This is just a demo. No steps for you here.
