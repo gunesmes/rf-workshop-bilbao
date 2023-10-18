@@ -23,19 +23,19 @@ Steps:
 1. Try it run - automation
 
 - Navigate to Actions > 03 👁️👁️ Testing with WatchUI
-- Click Run Workflow > click Run Workflow (the green button)
+- Click Run Workflow > Click Run Workflow (the green button)
 
 2. Try it run - autonomy
 
 - Navigate to Actions > 03 👁️👁️ Testing with WatchUI
-- Click Run Workflow > select autonomy (What tests to execute?) >
-  click Run Workflow (the green button)
+- Click Run Workflow > Select autonomy (What tests to execute?) >
+  Click Run Workflow (the green button)
 
 3. Enhance - autonomy
 
 - Navigate to Actions > 03 👁️👁️ Testing with WatchUI
-- Click Run Workflow > select autonomy (What tests to execute?) & change number of tests to execute to 20 >
-  click Run Workflow (the green button)
+- Click Run Workflow > Select autonomy (What tests to execute?) & change number
+  of tests to execute to 20 > Click Run Workflow (the green button)
 - Download report from GitHub Actions Artifacts
-- upload missing one to baseline folder
+- Upload missing one to baseline folder
 - Rerun the action and check the results

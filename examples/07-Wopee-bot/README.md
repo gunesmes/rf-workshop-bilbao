@@ -21,7 +21,7 @@ Steps:
 1. Navigate to [Wopee Commander](https://cmd.wopee.io/) and login with your
    GitHub/GitLab account
 2. Create a new project for url: https://dronjo.wopee.io/
-3. Start bot training: Test suites > Dashboard > click Learnings button
-4. Start bot training - part 2: Test suites > Dashboard > click Covering button
+3. Start bot training: `Test suites` > `Dashboard` > Click `Learnings` button
+4. Start bot training - part 2: `Test suites` > `Dashboard` > Click `Covering` button
 5. Review what was created on tab Scenarios - rename and add votes.
-6. Run the tests with Wopee Bot (Test suites > Dashboard > click Testing button)
+6. Run the tests with Wopee Bot (`Test suites` > `Dashboard` > Click `Testing` button)

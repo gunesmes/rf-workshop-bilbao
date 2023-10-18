@@ -65,8 +65,8 @@ Example test
 
 ## Dronjo
 
-Demo app build for the purpose of this workshop. It is a simple web application
-that allows you to purchase drones.
+[Demo app](https://dronjo.com/) build for the purpose of this workshop. It is a simple
+web application that allows you to purchase drones.
 
 ## Using status from console for testing
 
@@ -105,6 +105,7 @@ WOPEE SIMPLE BOT * 🤖 🙈 🙉 🙊 🐵 🐒 🦍 🦧
 ==============================================================================
 [ ERROR ] TOTAL ERRORS FOUND: 2
 [ WARN ] TOTAL WARNINGS FOUND: 0
+TOTAL TESTS: 10
 Crawl a website                                                       .
 ==============================================================================
 Crawl a website                                                       | PASS |

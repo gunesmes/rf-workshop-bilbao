@@ -172,7 +172,7 @@ Start progress loader
     ...    'beforeend',
     ...    '<div class="wopeePopup">'+
     ...    '<h2>❤️ Wopee.io 🦧</h2>'+
-    ...    '<p>Please wait, it takes a couple of seconds to get results.</p>'+
+    ...    '<p>Please wait, it takes a couple of seconds to get results from AI services.</p>'+
     ...    '</div>'+
     ...    '<style>'+
     ...    '.wopeePopup {'+
@@ -186,8 +186,9 @@ Start progress loader
     ...    'width: 300px;'+
     ...    'background-color: rgb(255 204 0);'+
     ...    'z-index: 9;'+
+    ...    'animation: blinker 3s linear infinite;'+
     ...    '}'+
-    ...    '.wopeePopup h2 { animation: blinker 3s linear infinite; }'+
+    # ...    '.wopeePopup h2 { animation: blinker 3s linear infinite; }'+
     ...    '@keyframes blinker { 50% { opacity: 0; } }'+
     ...    '<style>'
     ...    );}

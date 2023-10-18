@@ -31,6 +31,8 @@ Provide me steps to accomplish it in json format. Example:
 ```
 ````
 
+For hosting your owno model you can try [Fireworks.ai](https://fireworks.ai/)
+
 ## Trace viewer
 
 Analyze your result in [Trace viewer](https://trace.playwright.dev/)

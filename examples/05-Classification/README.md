@@ -38,4 +38,5 @@ Steps:
 - Navigate to Export Model button
 - Could be imported into our automation framework (python and javascript available)
 
-3. Ask trainer for explanation: How this could be advanced more? ... he has slide prepared for you ;)
+3. Ask trainer for explanation: How this could be advanced more?
+   ... he has slide prepared for you ;)
