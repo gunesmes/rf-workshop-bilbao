@@ -7,6 +7,11 @@ against.
 Example: [Amazon 404 page](https://www.amazon.com/asdf) - after each refress it
 is different.
 
+## Sample pictures
+Pictures for training and testing are available in the repo 
+(`examples/05-Classification/screenshots`) and also here:
+[Google drive](https://drive.google.com/drive/folders/1bKuOL7TtU4-zdYSDlLwxs_ep__48hvc5?usp=share_link)
+
 ## Building models
 
 See more
