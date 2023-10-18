@@ -4,7 +4,7 @@ This example shows how to use the `console` object to check the status of the te
 in the browser console.
 
 - Intro to [Robot Framework](https://robotframework.org/)
-- System under test: Dronjo
+- System under test: [Dronjo](https://dronjo.wopee.io/)
 - Browser library and its [Crawler](https://marketsquare.github.io/robotframework-browser/Browser.html#Crawl%20Site)
 - Example 1: Status from console testing
 
